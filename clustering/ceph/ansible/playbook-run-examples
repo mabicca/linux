@@ -1,0 +1,18 @@
+# As root user with  default ssh key:
+$ ansible-playbook -i hosts prepare-ceph-nodes.yml --user root
+
+# As root user with password:
+$ ansible-playbook -i hosts prepare-ceph-nodes.yml --user root --ask-pass
+
+# As sudo user with password - replace ubuntu with correct username
+$ ansible-playbook -i hosts prepare-ceph-nodes.yml --user ubuntu --ask-pass --ask-become-pass
+
+# As sudo user with ssh key and sudo password - replace ubuntu with correct username
+$ ansible-playbook -i hosts prepare-ceph-nodes.yml --user ubuntu --ask-become-pass
+
+# As sudo user with ssh key and passwordless sudo - replace ubuntu with correct username
+$ ansible-playbook -i hosts prepare-ceph-nodes.yml --user ubuntu --ask-become-pass
+
+# As sudo or root user with custom key
+$ ansible-playbook -i hosts prepare-ceph-nodes.yml --private-key /path/to/private/key <options>
+~                                                                                                     

@@ -1,0 +1,7 @@
+[ceph_nodes]
+ceph-mon01
+ceph-mon02
+ceph-mon03
+ceph-osd01
+ceph-osd02
+ceph-osd03
