@@ -1,0 +1,6 @@
+SSHPORT=22
+AZUREIP=IPADDRESS
+alias azurekey='cat ~/.ssh/azure_rsa.pub | pbcopy'
+alias azuressh='connect() { ssh -i ~/.ssh/azure_rsa mbicca@$1 }; connect'
+alias azurevm='connect() { ssh -p $SSHPORT -i ~/.ssh/azure_rsa mabicca@$AZUREIP };connect'
+alias azureip=' ip=$(curl -s ifconfig.io) | whois $ip | grep -i CIDR | cut -f2 -d: | pbcopy'
