@@ -1,0 +1,1 @@
+az network nsg rule create --access Allow --destination-address-prefixes '*' --destination-port-ranges 22 --direction Inbound --name SSH --nsg-name suse-node2-nsg --priority 100 --protocol Tcp --resource-group SUSE12CRM --source-address-prefixes 204.195.18.218/32 --source-port-ranges '*' 
